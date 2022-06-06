@@ -1,0 +1,35 @@
+.bottomPartBackground{
+    background-color: #1976d2;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.font-white{
+    color: white;
+}
+
+.font-navy{
+    color: navy;
+}
+
+.font-black{
+    color: black;
+}
+
+.font-large{
+    font-size: large;
+    font-family: cursive;
+}
+
+.font-medium{
+    font-size: medium;
+}
+
+.font-small{
+    font-size: small;
+}
+
+.suggestion-label{
+    font-weight: 500;
+    font-size: larger;
+}

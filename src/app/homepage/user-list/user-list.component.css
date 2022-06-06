@@ -1,0 +1,40 @@
+.col1d{
+    background-color: #00cfa5;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    margin-bottom: 5px;
+
+}
+
+.col2d{
+    background-color: #03b1f1 ;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.col1h{
+    background-color: #0c9075;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+}
+
+.col2h{
+    background-color: #0682b8 ;
+    padding: 10px;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+}
+
+.col1s{
+    background-color: #3cc0cf;
+    padding: 10px 20px 10px 20px;
+    width: 60px;
+}
+
+.col2s{
+    background-color: #1975d1 ;
+    padding: 10px;
+    padding: 10px 20px 10px 20px;
+    width: 60px;
+}

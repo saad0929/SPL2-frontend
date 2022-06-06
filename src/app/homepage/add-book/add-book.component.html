@@ -1,0 +1,36 @@
+<br>
+ 
+<div class="row">
+    <div class="col-md-6 offset-md-3" style="align-items: left;">
+        <h1 class="text-center"><b>ADD A BOOK TO LIST</b></h1>
+        <form [formGroup]="service.formModel" autocomplete="off" (submit)="addBook()">
+            <div class="form-group required">
+                <label>Book Name</label>
+                <input class="form-control" formControlName="bookName">
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Writter Name</label>
+                <input class="form-control" formControlName="writterName">
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Catagory</label>
+                <input class="form-control" formControlName="catagory">
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Description</label>
+                <input class="form-control" formControlName="description">
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-6 offset-md-3">
+                    <button type="submit" class="btn btn-lg btn-block" style="background-color: #0057ad;">SUBMIT</button>
+                    <br>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>

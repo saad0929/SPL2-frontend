@@ -1,0 +1,24 @@
+
+<div class="row content-background"> 
+    <div class="col-md-2" style=" font-size: medium; font-weight: 600; color: rgb(51, 8, 159);">My Profile</div>
+    
+    <div class="col-md-6 offset-md-2">
+        <br>
+        <table style="font-size: medium; color: rgb(3, 11, 84);" cellpadding="5px">
+            
+            <tr><th>Name</th><td>: {{user.username}}</td></tr>
+            <tr><th>Email</th><td>: {{user.email}}</td></tr>
+            <tr><th>Address</th><td>: {{user.address}}</td></tr>
+           
+        </table>
+        <br>
+    </div>
+</div>
+
+<div class="content-body">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+  

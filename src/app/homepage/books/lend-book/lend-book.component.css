@@ -1,0 +1,37 @@
+div.form-group label:not(.text-danger){
+    color: rgb(0, 0, 0) ;
+    font-weight: bold;
+}
+
+div.form-group.required>label:first-child:after{
+    content:'*';
+    color: rgb(255, 0, 0);
+    padding-left: 5px;
+}
+
+mat-form-field {
+    margin-right: 12px;
+    width: 100px;
+    /*background-color: #fff; */
+    border-radius: 5px;
+}
+
+.calender{
+    color: rgb(1, 7, 94);
+}
+
+mat-hint{
+    font-size: smaller;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.paddingK{
+    /* margin: 0px; */
+    background-color: red;
+}
+
+.example-form-field {
+    margin: 0 8px 16px 0;
+    width: 100%;
+}

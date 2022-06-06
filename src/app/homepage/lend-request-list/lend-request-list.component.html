@@ -1,0 +1,38 @@
+<div class="row">
+    <div>
+        <br>
+        <div class="tile-style">
+            <div>  
+                <table>
+                    <div style="margin: 2px;"><tr><th class="col1s">ID</th><th class="col2s">Book ID</th><th class="col1h">Book Name</th><th class="col2s">User ID</th><th class="col1h">User Name</th><th class="col2h">Start Date</th><th class="col1h">End Date</th></tr></div>
+                    <div *ngFor="let request of bookLendReqs" style="margin: 2px;">
+                        <tr><td class="col1s">{{request.id}}</td><td class="col2s">{{request.book_id}}</td><td class="col1d">{{request.book_name}}</td><td class="col2s">{{request.user_id}}</td><td class="col2d">{{request.user_name}}</td><td class="col1d">{{request.start_date}}</td><td class="col2d">{{request.end_date}}</td>
+                            <td>
+                                <div *ngIf="request.is_accepted==0">
+                                    <button class="editDeleteIconButton" (click)="editResponse(request, 1)">
+                                        Accept
+                                    </button>
+                                </div>
+                                <div *ngIf="request.is_accepted==1" style="padding: 10px; color: rgb(9, 156, 9);">
+                                    Accepted
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngIf="request.is_returned==0 && request.is_accepted==1">
+                                    <button class="editDeleteIconButton" (click)="editResponse(request, 2)">
+                                        Is Returned?
+                                    </button>
+                                </div>
+                                <div *ngIf="request.is_returned==1 && request.is_accepted==1" style="padding: 10px; color: rgb(115, 29, 181);">
+                                        Returned
+                                </div>
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+                <br> 
+                
+            </div>
+        </div>
+    </div> 
+</div>

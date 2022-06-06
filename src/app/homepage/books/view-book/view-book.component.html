@@ -1,0 +1,74 @@
+<br><br>
+<div class="row">
+    
+    <div class="col-sm-5 offset-sm-2" >
+        <img src="assets/book.png" height="230px"><br><br>
+    </div>
+    
+    <div class="col-sm-3">
+        <div class="text-center">
+            <button *ngIf="isAdmin" class="edit-delete-button" (click)="editBookInfo()">
+                <mat-icon>edit</mat-icon> Edit Book Info
+            </button>
+        </div>
+        <!-- <div class="text-center">
+            <button *ngIf="isAdmin" class="edit-delete-button" (click)="deleteBook()">
+                <mat-icon>delete</mat-icon> Delete This Book
+            </button> 
+        </div> -->
+        <div class="text-center">
+            <button *ngIf="isUser && lendRequest==0" class="edit-delete-button" (click)="landRequestOperation()">
+                <mat-icon>track_changes</mat-icon> Send Lend Request
+            </button>
+            <button *ngIf="isUser && lendRequest==1" class="edit-delete-button" style="background-color: rgb(221, 255, 0);">
+                Lend Request Sent
+            </button>
+            <button *ngIf="isUser && lendRequest==2" class="edit-delete-button" style="background-color: rgb(4, 210, 4); font-weight: 500; align-items: center;">
+                Book Received
+            </button> 
+            <button *ngIf="isUser && lendRequest==3" class="edit-delete-button" style="background-color: rgb(255, 47, 54);">
+                Lend Request Refused
+            </button>   
+        </div>
+        <br><br>
+        <div class="text-center" *ngIf="!isRated && isUser">
+            <!-- <button *ngIf="isUser" class="edit-delete-button"> -->
+                 <!-- <div class="edit-delete-button">Rate This Book</div> -->
+            <!-- </button>  -->
+            <div *ngIf="isUser" style="color: rgb(20, 4, 110); font-weight: bold; font-size: large;" (click)="landRequestOperation()">
+                Rate This Book
+            </div>
+        </div>
+        <br>
+        <div class="text-center" *ngIf="!isRated && isUser">
+            <div>
+                <ngb-rating class="" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+            </div><br>
+            <button (click)="submitRating()">
+                submit
+            </button>
+        </div>
+    </div>
+
+    <div class="offset-sm-2">
+        <table>
+            <tr><td class="title">Book Name </td><td class="value">: {{book.name}}</td></tr>
+            <tr><td class="title">Writter Name </td><td class="value">: {{book.author}}</td></tr>
+            <tr><td class="title">Catagory</td><td class="value">: {{book.category}}</td></tr>
+            <tr><td class="title"> Rating</td><td class="value">: {{book.rating}}</td></tr>
+        </table>
+        <br>
+        <!-- <div>
+            <ngb-rating [max]="5" [(rate)]="book.rate" [readonly]="true"></ngb-rating>
+        </div> -->
+    </div>
+</div>
+<br>
+<div style="margin: 30px; font-size: x-large; font-family: cursive">
+    <b>Description:</b>
+</div>
+<div style="margin: 30px; font-size: large; font-family: Courier">
+    {{book.description}}
+</div>
+
+

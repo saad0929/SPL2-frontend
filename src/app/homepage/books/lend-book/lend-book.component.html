@@ -1,0 +1,72 @@
+<br>
+ 
+<div class="row">
+    <div class="col-md-5 offset-md-3" style="align-items: center; background-color: antiquewhite; padding: 50px;">
+        <h1 class="text-center"><b>LEND A BOOK</b></h1>
+        <form [formGroup]="service.formModel" autocomplete="off" (submit)="addBookLendReq()">
+            <div class="form-group required">
+                <label>Book Name</label>
+                <input class="form-control" formControlName="bookName" [ngModel]="book.name" style="background-color: rgb(144, 175, 253); border: black;">
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Writter Name</label>
+                <input class="form-control" formControlName="writterName" [ngModel]="book.author" style="background-color: rgb(144, 175, 253); border: black;">
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Catagory</label>
+                <input class="form-control" formControlName="catagory" [ngModel]="book.category" style="background-color: rgb(144, 175, 253); border: black;">
+            </div><br>
+            <!-- <div class="row form-group required">
+                <label>Start Date</label><br>
+                <div class="col-md-9">
+                    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" class="form-control" formControlName="start_date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                </div>
+                <div class="col-md-3">
+                    <mat-datepicker-toggle matSuffix [for]="picker" class="calender"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+
+            </div>
+            <br>
+            <div class="row form-group required">
+                <label>End Date</label><br>
+                <div class="col-md-9">
+                    <input matInput [min]="minDate2" [max]="maxDate2" [matDatepicker]="picker" class="form-control" formControlName="end_date">
+                    <mat-hint>MM/DD/YYYY</mat-hint><br>
+                </div>
+                <div class="col-md-3">
+                    <mat-datepicker-toggle matSuffix [for]="picker2" class="calender"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </div>
+            </div> -->
+            <br>
+            <div class="form-group required">
+                <label>Select the date range from when you will borrow it</label>
+            </div>
+            <mat-form-field class="example-form-field" appearance="fill">
+                <mat-label>Select Range</mat-label>
+                <mat-date-range-input
+                  [formGroup]="campaignOne"
+                  [rangePicker]="campaignOnePicker">
+                  <input matStartDate placeholder="Start date" formControlName="start">
+                  <input matEndDate placeholder="End date" formControlName="end">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+            </mat-form-field>
+            
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-6 offset-md-3">
+                    <button type="submit" class="btn btn-lg btn-block" style="background-color: #0057ad;">SUBMIT</button>
+                    <br>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>

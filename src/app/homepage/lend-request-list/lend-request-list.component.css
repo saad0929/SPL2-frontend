@@ -1,0 +1,53 @@
+.col1d{
+    background-color: #46deef;
+    padding: 10px 20px 10px 20px;
+    width: 180px;
+    font-size: small;
+
+}
+
+.col2d{
+    background-color: #1d8eff ;
+    padding: 10px 20px 10px 20px;
+    width: 180px;
+    font-size: small;
+}
+
+.col1h{
+    background-color: #3cc0cf;
+    padding: 10px 20px 10px 20px;
+    width: 180px;
+    font-size: small;
+}
+
+.col2h{
+    background-color: #1975d1 ;
+
+    padding: 10px 20px 10px 20px;
+    width: 180px;
+    font-size: small;
+}
+
+.col1s{
+    background-color: #3cc0cf;
+    text-align: center;
+    width: 70px;
+    font-size: small;
+}
+
+.col2s{
+    background-color: #1975d1 ;
+    
+    text-align: center;
+    width: 70px;
+    font-size: small;
+}
+
+
+.editDeleteIconButton{
+    background-color: #0057ad;
+    color: white;
+    border-radius: 2px;
+    border-color: #1976d2;
+    margin: 0px 5px 0px 5px;
+}

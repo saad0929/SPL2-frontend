@@ -1,0 +1,57 @@
+<br>
+<div class="row mt-1">
+    <div class="col-md-12">
+        <form [formGroup]="service.formModel" (submit)="signUp()" autocomplete="off">
+            <div class="form-group required">
+                <label>User Name</label>
+                <input class="form-control" formControlName="username">
+                <span *ngIf="submitted && f['username'].getError('required')!=null">User name is required. </span>
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Password</label>
+                <input class="form-control" type="password" formControlName="password">
+                <span class="errormessage" *ngIf="submitted && f['password'].getError('required')!=null">Password is required. </span>
+                <span class="errormessage" *ngIf="submitted && f['password'].getError('pattern')!=null">Password must be at least 8 characters in length and contain A-Z, a-z, 0-9 and spacial character.</span>            
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Confirm Password</label>
+                <input type="password"  class="form-control" formControlName="confirmPassword">
+                <span class="errormessage" *ngIf="submitted && f['confirmPassword'].getError('required')!=null">Confirm Password is required. </span>
+                <span class="errormessage" *ngIf="submitted && f['confirmPassword'].getError('matching')!=null" >Confirm Password does not match.</span>
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Email</label>
+                <input class="form-control" formControlName="email">
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('required')!=null">Email is required. </span>
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('email')!=null" >Email is Invalid.</span>
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Phone Number</label>
+                <input class="form-control" formControlName="phone">
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('required')!=null">Email is required. </span>
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('email')!=null" >Email is Invalid.</span>
+            </div>
+            <br>
+            <div class="form-group required">
+                <label>Address</label>
+                <input class="form-control" formControlName="address">
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('required')!=null">Email is required. </span>
+                <span class="errormessage" *ngIf="submitted && f['email'].getError('email')!=null" >Email is Invalid.</span>
+            </div>
+            <br>
+            
+            <br>              
+            <div class="form-row">
+                <div class="form-group col-md-6 offset-md-3">
+                    <button type="submit" class="btn btn-lg btn-block" >Sign Up</button>
+                    <br>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>

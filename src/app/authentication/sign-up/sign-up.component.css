@@ -1,0 +1,32 @@
+div.form-group label:not(.text-danger){
+    color: white ;
+    font-weight: lighter;
+}
+
+div.form-group.required>label:first-child:after{
+    content:'*';
+    color: #fff;
+    padding-left: 5px;
+}
+
+mat-form-field {
+    margin-right: 12px;
+    width: 100%;
+    /* background-color: #fff; */
+    border-radius: 5px;
+}
+
+.calender{
+    color: rgb(1, 7, 94);
+}
+
+mat-hint{
+    font-size: smaller;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.paddingK{
+    /* margin: 0px; */
+    background-color: red;
+}

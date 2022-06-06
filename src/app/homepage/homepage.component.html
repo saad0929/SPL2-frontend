@@ -1,0 +1,29 @@
+
+<div class="container-fluid heightB">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav text-left">
+        <button mat-raised-button *ngIf="isUser" routerLink='/homepage/profile' class="option-style2"> My Profile </button> <br>
+        <button mat-raised-button (click)="toogle()" routerLink='/homepage/books' class="option-style2"> Catagory </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Action and Adventure')" class="option-style"> Action and Adventure </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Classic')" class="option-style"> Classic </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Comic Book or Graphic Novel')" class="option-style"> Comic Book or Graphic Novel </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Detective and Mystery')" class="option-style"> Detective and Mystery </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Fantasy')" class="option-style"> Fantasy </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Historical Fiction')" class="option-style"> Historical Fiction </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Horror')" class="option-style"> Horror </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('Literary Fiction')" class="option-style"> Literary Fiction </button>
+        <button mat-raised-button *ngIf="catagoryOptionOpen" (click)="selectCatagory('all')" class="option-style"> All Book </button>
+        <button mat-raised-button *ngIf="isAdmin" routerLink='/homepage/add-book' class="option-style2"> Add Book </button> <br>
+        <button mat-raised-button *ngIf="isAdmin" routerLink='/homepage/user-list' class="option-style2"> User Lists </button> <br>
+        <button mat-raised-button *ngIf="isAdmin" routerLink='/homepage/lend-req-list' class="option-style2"> Request Lists </button> <br>
+        <button mat-raised-button *ngIf="!isGuestUser" (click)="signOut()" class="option-style2">Sign Out</button>
+      </div>
+      <div class="col-sm-10"> 
+        <router-outlet></router-outlet>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <app-bottom-bar></app-bottom-bar>

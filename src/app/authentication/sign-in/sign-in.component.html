@@ -1,0 +1,20 @@
+<br>
+
+<form [formGroup]="service.formModel" #form="ngForm" class="mb-4" autocomplete="off" (submit)="signIn()">
+    <div class="form-group">
+        <label>User Name</label>
+        <input class="form-control" formControlName="username">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="form-group col-md-6 offset-md-3">
+            <br>
+            <button type="submit" class="btn btn-lg btn-block">SIGN IN</button>
+        </div>
+    </div>
+</form>

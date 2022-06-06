@@ -1,0 +1,42 @@
+
+
+<div class="row">
+    <div *ngFor="let book of books" class="col-sm-3">
+        <div class="tile-style row" (click)="viewBook(book)">
+            <div>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <img src="assets/book.png" height="70px"><br>
+                    </div>
+                    <div class="col-sm-2">
+                        <b>#{{book.id}}</b>
+                    </div>
+                </div>
+                <table>
+                    <!-- <tr><td class="title">Book Id </td><td>:</td><td class="value"> {{book.id}}</td></tr> -->
+                    <tr><td class="title">Book Name </td><td>:</td><td class="value"> {{book.name}}</td></tr>
+                    <tr><td class="title">Writter Name </td><td>:</td><td class="value"> {{book.author}}</td></tr>
+                    <tr><td class="title">Catagory</td><td>:</td><td class="value"> {{book.category}}</td></tr>
+                    <tr><td class="title"> Rating</td><td>:</td><td class="value"> {{book.rating}}</td></tr>
+                </table>
+                <br>
+            </div>
+            
+            <div class="row">
+                
+        
+                <!-- <div class="col-sm-3">
+                    <button *ngIf="isAdmin" class="edit-delete-button" (click)="deleteBook(book)">
+                        <mat-icon>delete</mat-icon>
+                    </button> 
+                </div> -->
+                <div class="col-sm-2 offset-sm-10">
+                    <button *ngIf="isAdmin" class="edit-delete-button" (click)="editBookInfo(book)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
+            </div>
+          
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,26 @@
+.tile-style{
+    background-color: #6baef1;
+    padding: 10px;
+    margin: 10px;
+    
+    font-family: cursive;
+    height: 95%;
+}
+.title{
+    font-size: smaller;
+    font-weight: bolder;
+}
+.value{
+    font-size: small;
+    font-weight: 500;
+}
+
+.edit-delete-button{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+ngb-rating {
+    color: blue;
+    font-size: 40px;
+}
